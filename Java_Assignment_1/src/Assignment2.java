@@ -231,9 +231,9 @@ public class Assignment2 {
     /* My explanation below
      ***********************
      *  When reference variables (like a or b) are created, they are just references of objects which points to memory locations 
-     *  present inside the heap. But the swap method creates its own reference variables which points to other and different memory
-     *  locations inside the heap. So, even if the x and y are interchanged 
-     *  within this method, the original reference variables(a and b) will still point to the same old memory locations.
+     *  present inside the heap. But the swap method here creates its own reference variables which points to other and different memory
+     *  locations inside the heap. So, even if the x and y are interchanged within this method, the original reference variables(a and b)
+     *  will still point to the same old memory locations. The swap happens to the references in the method.
      *  This is one of the reason why it is said that java is always pass by value.
      *  
      */
