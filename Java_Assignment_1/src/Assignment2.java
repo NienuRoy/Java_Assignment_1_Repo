@@ -1,3 +1,7 @@
+/*
+score:8.5 + 1(extra credit)
+comments: good work! pay attention to corner cases
+*/
 /**
  * Created by Rose on 1/21/17.
  * Assignment for your lecture 2. Please finish all the questions under
@@ -47,7 +51,7 @@ public class Assignment2 {
      * If the salary is less than or equal to 8900, the Social Security Tax is 6.2% of the salary.
      * If the salary is more than 8900, the Social Security Tax is 6.2% of 106,800.
      */
-    public double socialSecurityTax(Employee employee) {
+    public double socialSecurityTax(Employee employee) {                              //correct
         //write your code here
     	
     	double sstax  = 0;
@@ -68,7 +72,7 @@ public class Assignment2 {
      * If the employee is between 50 and 60(exclusive), rate is 5% of salary; If the employee is above 60, rate is 6% of salary.
      */
     
-    public double insuranceCoverage(Employee employee) {
+    public double insuranceCoverage(Employee employee) {                            //correct
         //write your code here
     	int insurate = 0;
     	if (employee.age<35) {
@@ -94,7 +98,7 @@ public class Assignment2 {
      * For example, Alice's salary is 1000, John's salary is 500, Jenny's salary is 1200, you should print:
      * John Alice Jenny
      */
-    public void sortSalary(Employee e1, Employee e2, Employee e3) {
+    public void sortSalary(Employee e1, Employee e2, Employee e3) {                 //correct
         //write your code here
     	
     	double asal[] = {e1.salary,e2.salary,e3.salary};
@@ -124,7 +128,7 @@ public class Assignment2 {
      * Do not change the input of this method.
      * Try to add a new method in Employee class: public void raiseSalary(double byPercent)
      */
-    public void tripleSalary(Employee employee) {
+    public void tripleSalary(Employee employee) {                    //correct
        //write your code here
        
     	System.out.println("The monthly salary of the employee " +employee.name +" currently is " +employee.salary);
@@ -137,11 +141,12 @@ public class Assignment2 {
     /**
      * Write a method to determine whether a number is prime
      */
-    public boolean isPrime(int n) {
+    public boolean isPrime(int n) {                                //one place wrong: if n is 2, after you print out, you should return true
         //write your code here
     	
     	if (n==2){
     		System.out.println("The number " +n +" is a prime number");
+		return true;
     	 }
     	
     	int i =2;
@@ -163,7 +168,7 @@ public class Assignment2 {
      * result has only one digit. For example: Given n = 38, the process is
      * like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.
      */
-    public int addDigits(int n) {
+    public int addDigits(int n) {                         //miss one corner case: if n is 199, your return is 10, but you should return 1
         //write your code here
     	int sum = 0;
     	int num= 0;
@@ -194,7 +199,7 @@ public class Assignment2 {
      * another prime factor 7. Note that 1 is typically treated as an ugly
      * number.
      */
-    public boolean isUgly(int n) {
+    public boolean isUgly(int n) {                   //correct
     	
     	while (n%2==0)
     		n = n/2;
@@ -227,7 +232,7 @@ public class Assignment2 {
     /*
      write your understanding here.
     */
-    
+    //correct
     /* My explanation below
      ***********************
      *  When reference variables (like a or b) are created, they are just references of objects which points to memory locations 
